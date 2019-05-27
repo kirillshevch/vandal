@@ -1,22 +1,14 @@
 # Vandal
 
-A small gem that help deleting an ActiveRecord instance or collection with associations (skipping callbacks or validations) 
+A small gem that help to *delete an ActiveRecord instance or collection with associations* (skipping callbacks or validations) 
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Add this line to your application's Gemfile and then execute `bundle install`
 
 ```ruby
 gem 'vandal'
 ```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install vandal
 
 ## Usage
 
