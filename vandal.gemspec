@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Kirill Shevchenko']
   spec.email         = ['hello@kirillshevch.com']
 
-  spec.summary       = 'ActiveRecord force destroy record with associations.'
+  spec.summary       = 'ActiveRecord force destroy records with associations'
   spec.description   = spec.summary
   spec.homepage      = 'https://github.com/kirillshevch/vandal'
   spec.license       = 'MIT'

@@ -1,8 +1,6 @@
 # Vandal
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/vandal`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+A small gem that help deleting an ActiveRecord instance or collection with associations (skipping callbacks or validations) 
 
 ## Installation
 
@@ -22,17 +20,33 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Vandal gem adds 2 methods to `ActiveRecord::Base`
 
-## Development
+## #vandal_destroy!
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+Delete an ActiveRecord instance with associations even if the callbacks return false or rescue error.
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+```ruby
+class User
+  has_many :followers # Does not contain dependent: :destroy
+end
+
+User.find_by(id: 1).vandal_destroy!
+```
+
+Followers will deleted along with `User`.
+
+## #vandal_destroy_all!
+
+Applies `vandal_destroy!` for ActiveRecord collection
+
+```ruby
+User.all.vandal_destroy_all!
+```
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/kirillweb/vandal.
+Bug reports and pull requests are welcome on GitHub at https://github.com/kirillshevch/vandal.
 
 ## License
 

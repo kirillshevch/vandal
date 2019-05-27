@@ -9,14 +9,14 @@ jobs:
 
       - restore_cache:
           keys:
-            - api-struct-bundle-v2-{{ checksum "api_struct.gemspec" }}
+            - vandal-bundle-v2-{{ checksum "vandal.gemspec" }}
 
       - run:
           name: Bundle Install
           command: bundle check || bundle install
 
       - save_cache:
-          key: api-struct-bundle-v2-{{ checksum "api_struct.gemspec" }}
+          key: vandal-bundle-v2-{{ checksum "vandal.gemspec" }}
           paths:
             - vendor/bundle
 
