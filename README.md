@@ -2,7 +2,7 @@
   <img src="https://github.com/kirillshevch/vandal/raw/master/vandal.jpg?sanitize=true" width="65%" alt="Vandal Logo"/>
 </p>
 
-A small gem that help to *delete an ActiveRecord instance or collection with associations* (skipping callbacks or validations) 
+A small gem that helps to *delete an ActiveRecord instance or collection with associations* (skipping callbacks or validations) 
 
 ## Installation
 
