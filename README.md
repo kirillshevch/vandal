@@ -14,13 +14,13 @@ gem 'vandal'
 
 Vandal gem adds 2 methods to `ActiveRecord::Base`
 
-## #vandal_destroy!
+## #vandal_destroy
 
 Delete an ActiveRecord instance with associations even if the callbacks return false or rescue error.
 
 ```ruby
 class User
-  has_many :followers # Does not contain dependent: :destroy
+  has_many :followers # Does not even contain dependent: :destroy
 end
 
 User.find_by(id: 1).vandal_destroy!
@@ -28,7 +28,7 @@ User.find_by(id: 1).vandal_destroy!
 
 Followers will deleted along with `User`.
 
-## #vandal_destroy_all!
+## #vandal_destroy_all
 
 Applies `vandal_destroy!` for ActiveRecord collection
 

@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Kirill Shevchenko']
   spec.email         = ['hello@kirillshevch.com']
 
-  spec.summary       = 'ActiveRecord force destroy records with associations'
+  spec.summary       = 'ActiveRecord force destroy records with all related associations'
   spec.description   = spec.summary
   spec.homepage      = 'https://github.com/kirillshevch/vandal'
   spec.license       = 'MIT'
@@ -23,5 +23,11 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rake'
   spec.add_development_dependency 'rspec'
   spec.add_development_dependency 'rubocop'
-  spec.add_development_dependency 'pry-byebug'
+  spec.add_development_dependency 'byebug'
+  spec.add_development_dependency 'rspec-rails'
+  spec.add_development_dependency 'factory_bot'
+  spec.add_development_dependency 'factory_bot_rails'
+  spec.add_development_dependency 'database_cleaner'
+  spec.add_development_dependency 'rails'
+  spec.add_development_dependency 'sqlite3'
 end
