@@ -25,7 +25,7 @@ class User
   has_many :followers # Does not even contain dependent: :destroy
 end
 
-User.find_by(id: 1).vandal_destroy!
+User.find_by(id: 1).vandal_destroy
 ```
 
 Followers will deleted along with `User`.
@@ -35,7 +35,7 @@ Followers will deleted along with `User`.
 Applies `vandal_destroy!` for ActiveRecord collection
 
 ```ruby
-User.all.vandal_destroy_all!
+User.all.vandal_destroy_all
 ```
 
 ## Contributing
