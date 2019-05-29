@@ -1,3 +1,6 @@
+[![Gem Version](https://badge.fury.io/rb/vandal.svg)](https://badge.fury.io/rb/vandal)
+[![CircleCI](https://circleci.com/gh/kirillshevch/vandal.svg?style=svg)](https://circleci.com/gh/kirillshevch/vandal)
+
 <p align="center">
   <img src="https://github.com/kirillshevch/vandal/raw/master/vandal.jpg?sanitize=true" width="65%" alt="Vandal Logo"/>
 </p>
