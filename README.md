@@ -32,7 +32,7 @@ Followers will deleted along with `User`.
 
 ## #vandal_destroy_all
 
-Applies `vandal_destroy!` for ActiveRecord collection
+Applies `vandal_destroy` for ActiveRecord collection
 
 ```ruby
 User.all.vandal_destroy_all
